@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto | Radio Visión El Bolsón</title>
+    <!-- Cargamos Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+    .font-old-money { font-family: 'Playfair Display', serif; }
+    body { opacity: 0; transition: opacity .2s ease-in; }
+    </style>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-stone-100 font-sans antialiased text-gray-800 flex flex-col min-h-screen">
+
+<header class="bg-nav-force shadow-md sticky top-0 z-50 text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+        <a href="index.html" class="flex items-center space-x-3 font-old-money">
+            <span class="text-3xl">RadioVisión</span>
+            <span class="font-sans text-xs uppercase tracking-[0.24em] opacity-80">El Bolsón</span>
+        </a>
+
+        <nav class="hidden md:flex space-x-8">
+            <a href="index.html" class="font-old-money text-lg hover:text-blue-200 px-3 py-2 transition-colors">Inicio</a>
+            <a href="index.html#programacion" class="font-old-money text-lg hover:text-blue-200 px-3 py-2 transition-colors">Programación</a>
+            <a href="iepaelbolson.html" class="font-old-money text-lg hover:text-blue-200 px-3 py-2 transition-colors">I.E.P.A El Bolsón</a>
+            <a href="contacto.html" class="font-old-money text-lg hover:text-blue-200 px-3 py-2 transition-colors">Contacto</a>
+        </nav>
+
+        <button id="menu-btn" class="md:hidden p-2 hover:text-blue-200 focus:outline-none">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+        </button>
+    </div>
+</header>
+
+<div id="mobile-menu" class="hidden md:hidden bg-nav-force text-white shadow-sm sticky top-16 z-40 border-t border-white/10 p-4 space-y-2">
+    <a href="index.html" class="block font-old-money text-lg hover:text-blue-200 py-2 px-2">Inicio</a>
+    <a href="index.html#programacion" class="block font-old-money text-lg hover:text-blue-200 py-2 px-2">Programación</a>
+    <a href="iepaelbolson.html" class="block font-old-money text-lg hover:text-blue-200 py-2 px-2">I.E.P.A El Bolsón</a>
+    <a href="contacto.html" class="block font-old-money text-lg hover:text-blue-200 py-2 px-2">Contacto</a>
+</div>
+
+    <!-- ================= SECCIÓN DE CONTACTO ================= -->
+    <main class="flex-grow max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 w-full">
+        
+        <!-- Título principal -->
+        <div class="text-center mb-12">
+            <h1 class="text-4xl font-bold text-blue-900 mb-4">¡Escríbanos! Nos agrada saber de ustedes...</h1>
+            <p class="text-xl text-gray-600">Si pasaste por acá, déjanos tu saludo. Para nosotros es una bendición.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 bg-card p-8 md:p-12 rounded-2xl shadow-sm border border-gray-100">
+            
+            <!-- COLUMNA IZQUIERDA: Info y Mapa -->
+            <div class="flex flex-col space-y-8">
+                
+                <!-- Info de contacto -->
+                <div class="bg-card p-6 rounded-xl border ">
+                    <h3 class="font-bold text-blue-900 text-lg mb-2">Pedidos de Oración</h3>
+                    <p class="text-gray-700 mb-2">Por favor, envíe sus pedidos de oración o consultas a nuestro correo directo:</p>
+                    <a href="mailto:radiovisionelbolson97.5@gmail.com" class="text-blue-700 font-bold hover:underline text-lg break-all">
+                        radiovisionelbolson97.5@gmail.com
+                    </a>
+                    <p class="mt-4 font-semibold text-gray-800">¡Muchas Gracias!</p>
+                </div>
+
+                <!-- Mapa de Google (Embebido) -->
+                <div>
+                    <h3 class="font-bold text-blue-900 text-lg mb-4">Nuestra Ubicación</h3>
+                    <p class="text-gray-600 text-sm mb-4">Barrio Obrero J.B. Alberdi N° 40, El Bolsón, Río Negro, Argentina</p>
+                    <div class="w-full rounded-xl overflow-hidden shadow-sm border border-gray-200 aspect-video relative">
+                        <!-- El mapa apunta directamente a la dirección en El Bolsón -->
+                        <iframe class="absolute top-0 left-0 w-full h-full" src="https://www.google.com/maps?q=Barrio+Obrero+J.B.+Alberdi+40,+El+Bolson,+Rio+Negro,+Argentina&output=embed" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- COLUMNA DERECHA: Formulario de Contacto -->
+            <div class="bg-card p-8 rounded-xl shadow-sm border border-gray-100">
+                <h3 class="font-bold text-blue-900 text-2xl mb-6">Envíenos su mensaje</h3>
+                
+                <!-- IMPORTANTE: Reemplaza "TU_CODIGO_AQUI" con el código que te dé Formspree -->
+                <form action="https://formspree.io/f/TU_CODIGO_AQUI" method="POST" class="space-y-6">
+                    
+                    <!-- Nombre -->
+                    <div>
+                        <label for="nombre" class="block text-sm font-medium text-gray-700 mb-1">Nombre *</label>
+                        <input type="text" id="nombre" name="nombre" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-900 focus:border-transparent outline-none transition-all">
+                    </div>
+
+                    <!-- Email -->
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email *</label>
+                        <input type="email" id="email" name="email" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-900 focus:border-transparent outline-none transition-all">
+                    </div>
+
+                    <!-- Teléfono y Tema (En dos columnas) -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div>
+                            <label for="telefono" class="block text-sm font-medium text-gray-700 mb-1">Teléfono</label>
+                            <input type="tel" id="telefono" name="telefono" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-900 focus:border-transparent outline-none transition-all">
+                        </div>
+                        <div>
+                            <label for="tema" class="block text-sm font-medium text-gray-700 mb-1">Tema</label>
+                            <input type="text" id="tema" name="tema" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-900 focus:border-transparent outline-none transition-all">
+                        </div>
+                    </div>
+
+                    <!-- Mensaje -->
+                    <div>
+                        <label for="mensaje" class="block text-sm font-medium text-gray-700 mb-1">Mensaje *</label>
+                        <textarea id="mensaje" name="mensaje" rows="5" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-900 focus:border-transparent outline-none transition-all resize-none"></textarea>
+                    </div>
+
+                    <!-- Botón Enviar -->
+                    <button type="submit" class="w-full bg-blue-900 hover:bg-blue-800 text-white font-bold py-4 rounded-lg shadow-md transition-colors duration-300 text-lg">
+                        Enviar Mensaje
+                    </button>
+
+                </form>
+            </div>
+
+        </div>
+
+    </main>
+
+    <footer class="bg-stone-800 text-white mt-auto">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 flex flex-col md:flex-row justify-between items-center">
+            <div class="mb-6 md:mb-0 text-center md:text-left">
+                <h3 class="font-bold text-lg">I.E.P.A El Bolsón</h3>
+                <p class="text-stone-300 text-sm mt-1">Llevando la palabra a través de RadioVisión.</p>
+            </div>
+            <div class="flex flex-wrap justify-center md:justify-end gap-6 text-sm font-medium">
+                <a href="https://www.facebook.com/radiovision.elbolson" target="_blank" class="text-stone-300 hover:text-white transition-colors">Facebook</a>
+                <a href="https://x.com/RVisionElbolson" target="_blank" class="text-stone-300 hover:text-white transition-colors">X (Twitter)</a>
+                <a href="https://www.youtube.com/@radiovisionelbolson4968" target="_blank" class="text-stone-300 hover:text-white transition-colors">YouTube</a>
+            </div>
+        </div>
+        <div class="bg-stone-900 text-center py-4 text-sm text-stone-300">&copy; 2026 RadioVisión El Bolsón. Todos los derechos reservados.</div>
+    </footer>
+    <script>
+        const btn = document.getElementById('menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+        window.addEventListener('DOMContentLoaded', () => {
+            document.body.style.opacity = '1';
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RadioVisión El Bolsón | I.E.P.A</title>
+    <!-- Cargamos Tailwind CSS para el diseño -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+    .font-old-money { font-family: 'Playfair Display', serif; }
+    body { opacity: 0; transition: opacity .2s ease-in; }
+    </style>
+    <script>
+    tailwind.config = {
+        theme: {
+        extend: {
+            colors: {
+            'nav-slate': '#B0CBD4',
+            }
+        }
+        }
+    }
+    </script>
+</head>
+<body class="font-sans antialiased text-gray-800 flex flex-col min-h-screen">
+
+    <!-- ================= CABECERA (HEADER) ================= -->
+<header class="bg-nav-force shadow-md sticky top-0 z-50 text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+        <a href="index.html" class="flex items-center space-x-3 font-old-money">
+            <span class="text-3xl">RadioVisión</span>
+            <span class="font-sans text-xs uppercase tracking-[0.24em] opacity-80">El Bolsón</span>
+        </a>
+
+        <nav class="hidden md:flex space-x-8">
+            <a href="index.html" class="font-old-money text-lg hover:text-blue-200 px-3 py-2 transition-colors">Inicio</a>
+            <a href="index.html#programacion" class="font-old-money text-lg hover:text-blue-200 px-3 py-2 transition-colors">Programación</a>
+            <a href="iepaelbolson.html" class="font-old-money text-lg hover:text-blue-200 px-3 py-2 transition-colors">I.E.P.A El Bolsón</a>
+            <a href="contacto.html" class="font-old-money text-lg hover:text-blue-200 px-3 py-2 transition-colors">Contacto</a>
+        </nav>
+
+        <button id="menu-btn" class="md:hidden p-2 hover:text-blue-200 focus:outline-none">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+        </button>
+    </div>
+</header>
+
+<div id="mobile-menu" class="hidden md:hidden bg-nav-force text-white shadow-sm sticky top-16 z-40 border-t border-white/10 p-4 space-y-2">
+    <a href="index.html" class="block font-old-money text-lg hover:text-blue-200 py-2 px-2">Inicio</a>
+    <a href="index.html#programacion" class="block font-old-money text-lg hover:text-blue-200 py-2 px-2">Programación</a>
+    <a href="iepaelbolson.html" class="block font-old-money text-lg hover:text-blue-200 py-2 px-2">I.E.P.A El Bolsón</a>
+    <a href="contacto.html" class="block font-old-money text-lg hover:text-blue-200 py-2 px-2">Contacto</a>
+</div>
+
+    <!-- ================= CONTENIDO PRINCIPAL ================= -->
+    <main class="flex-grow max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 w-full">
+        
+        <div class="flex flex-col gap-12">
+            
+            <!-- ================= FILA 1: RADIO Y CHAT ================= -->
+<!-- 1. REPRODUCTOR DE RADIO (ZENO FM) -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 min-w-0">
+                    
+                    <!-- ENCABEZADO CON LOGO CIRCULAR -->
+                    <div class="flex flex-col items-center text-center mb-6">
+                        
+                        <!-- Contenedor del Logo -->
+                        <div class="w-24 h-24 mb-3 rounded-full overflow-hidden border-4 border-gray-50 shadow-md">
+                            <!-- AQUÍ VA TU IMAGEN. Asegúrate de que se llame logo.jpg o cambia el nombre aquí -->
+                            <img src="logo.jpg" alt="Logo Radio Visión" class="w-full h-full object-cover">
+                        </div>
+                        
+                        <!-- Título -->
+                        <h2 class="text-2xl font-bold text-stone-900 flex items-center justify-center">
+                            <span class="w-3 h-3 bg-red-500 rounded-full animate-pulse mr-3"></span>
+                            Escuchando en Vivo
+                        </h2>
+                        
+                    </div>
+
+                    <!-- Reproductor -->
+                    <div class="md:col-span-2 min-w-0">
+                        <iframe src="https://www.zeno.fm/player/radiovisionelbolson" width="100%" height="240" frameborder="0" scrolling="no"></iframe>
+                    </div>
+                </div>
+
+<!-- Contenedor del Chat con Separador -->
+<section class="mt-12 flex flex-col items-center">
+    
+    <!-- Este div contiene la línea separadora lateral (franja) -->
+    <div class="border-l-4 border-walking-vinnie pl-8 py-2">
+        
+                <!-- 2. CHAT EN VIVO (MINNIT) -->
+                <div class="w-full max-w-lg bg-linen/50 backdrop-blur-sm rounded-lg p-4">
+                    <h2 class="text-xl font-bold text-stone-900 mb-4">Chat de Oyentes</h2>
+                    <div class="flex-grow w-full rounded-lg overflow-hidden flex flex-col items-center justify-center">
+                        <!-- CÓDIGO DE MINNIT -->
+                        <script src="https://minnit.chat/js/embed.js?c=1772345192" defer></script>
+                        <span style="display: none;" class="minnit-chat-sembed" data-chatname="https://organizations.minnit.chat/714252449224741/c/Main?embed" data-style="width:100%; height:450px; max-height:90vh;" data-version="1.55">Chat</span>
+                        <!-- Créditos Minnit -->
+                        <p class="powered-by-minnit text-xs text-gray-400 mt-2 hover:text-gray-600 transition-colors">
+                        </p>
+                    </div>
+                </div>
+                
+            </div> <!-- Fin Fila 1 -->
+
+            <!-- ================= FILA 2: PROGRAMACIÓN Y YOUTUBE ================= -->
+            <div id="programacion" class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                
+                <!-- COLUMNA IZQUIERDA: PROGRAMACIÓN -->
+                <div class="lg:col-span-2">
+                    <h2 class="text-3xl font-bold text-stone-900 mb-6">Nuestra Programación</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        
+                        <!-- Programa 1 -->
+                        <div class="bg-card rounded-xl border border-gray-100 p-6 flex flex-col hover:shadow-md transition-shadow duration-300">
+                            <h3 class="text-xl font-bold text-gray-800 mb-1">Cristo en el Hogar</h3>
+                            <p class="text-xs text-blue-600 font-medium mb-3">Conducción: Pastora Luisa Gonzalez y Pastor Leonardo Caceres</p>
+                            <p class="text-gray-600 mb-4 text-sm leading-relaxed">
+                                Un programa en el cual queremos acercarte información local, nacional e internacional.
+                            </p>
+                            <div class="mb-4 flex-grow">
+                                <h4 class="font-semibold text-gray-800 mb-2 text-xs uppercase tracking-wider">Segmentos:</h4>
+                                <ul class="space-y-2 text-sm text-gray-600">
+                                    <li class="flex items-start"><span class="mr-2">📰</span> <span><strong>Lectura de titulares.</strong></span></li>
+                                    <li class="flex items-start"><span class="mr-2">🍲</span> <span><strong>La Receta.</strong> </span></li>
+                                    <li class="flex items-start"><span class="mr-2">💡</span> <span><strong>Consejos prácticos.</strong></span></li>
+                                    <li class="flex items-start"><span class="mr-2">📖</span> <span><strong>Reflexión en la Palabra.</strong></span></li>
+                                </ul>
+                            </div>
+                            <div class="mt-auto bg-stone-100 text-stone-900 p-2 rounded-lg text-center font-bold text-xs border border-stone-200">
+                                🗓️ Martes a Viernes | 🕣 8:30 a 10:00 (Arg)
+                            </div>
+                        </div>
+
+                        <!-- Programa 2 -->
+                        <div class="bg-card rounded-xl border border-gray-100 p-6 flex flex-col hover:shadow-md transition-shadow duration-300">
+                            <h3 class="text-xl font-bold text-gray-800 mb-1">Visión de Reino</h3>
+                            <p class="text-xs text-blue-600 font-medium mb-3">Conducción: Pastor Leonardo Caceres</p>
+                            <p class="text-gray-600 mb-4 text-sm leading-relaxed flex-grow">
+                                Un programa de estudio de la palabra, en el cual te invitamos a profundizar más en ella. Entendiendo que tenemos una vida que Dios quiere que vivamos sabiendo de su amor y día a día buscando que nuestros pasos sean guiados por Él.<br><br>
+                                ¡Te invitamos a interiorizarnos juntos!
+                            </p>
+                            <div class="mt-auto bg-stone-100 text-stone-900 p-2 rounded-lg text-center font-bold text-xs border border-stone-200">
+                                🗓️ Miércoles | 🕙 22:00 Hrs (Arg)
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- COLUMNA DERECHA: CANAL DE YOUTUBE -->
+                <div class="lg:col-span-1 flex flex-col">
+                    <h2 class="text-3xl font-bold text-stone-900 mb-6">Nuestro Canal</h2>
+                    <div class="bg-card backdrop-blur-sm rounded-2xl p-6 border border-gray-100 flex flex-col h-full hover:shadow-md transition-shadow duration-300">
+                        <!-- Video de YouTube -->
+                        <div class="w-full rounded-lg overflow-hidden shadow-sm bg-gray-100 aspect-video relative mb-4">
+                            <!-- !!! REEMPLAZA EL ID DEL VIDEO AQUÍ !!! -->
+                            <iframe class="absolute top-0 left-0 w-full h-full" src="https://www.youtube.com/embed/1gQN52luS68?si=qX6Tj3_jZhBfjA2g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        </div>
+                        <!-- Info y Botón -->
+                        <div class="flex-grow flex flex-col justify-between">
+                            <div>
+                                <h3 class="text-lg font-bold text-gray-800 mb-2">Radiovisión El Bolsón</h3>
+                                <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                                    Reviví nuestras transmisiones, los estudios de "Con Visión de Reino" y no te pierdas ningún mensaje.
+                                </p>
+                            </div>
+                            <!-- Enlace al canal con suscripción automática -->
+                            <a href="https://www.youtube.com/@radiovisionelbolson4968?sub_confirmation=1" target="_blank" class="bg-amber-700 hover:bg-red-700 text-white font-bold py-3 px-4 rounded-full transition-colors duration-300 flex items-center shadow-md w-full justify-center text-sm mt-auto">
+                                <svg class="w-5 h-5 mr-2 fill-current" viewBox="0 0 24 24"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/></svg>
+                                SUSCRIBITE AL CANAL
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div> <!-- Fin Fila 2 -->
+        </div> <!-- Fin del flex contenedor principal -->
+    </main>
+
+    <!-- ================= PIE DE PÁGINA (FOOTER) ================= -->
+<!-- ================= PIE DE PÁGINA (FOOTER) ================= -->
+    <footer class="bg-stone-800 text-white mt-auto">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 flex flex-col md:flex-row justify-between items-center">
+            <div class="mb-6 md:mb-0 text-center md:text-left">
+                <h3 class="font-bold text-lg">I.E.P.A El Bolsón</h3>
+                <p class="text-stone-300 text-sm mt-1">Llevando la palabra a través de RadioVisión.</p>
+            </div>
+            <div class="flex flex-wrap justify-center md:justify-end gap-6 text-sm font-medium">
+                <a href="https://www.facebook.com/radiovision.elbolson" target="_blank" class="text-stone-300 hover:text-white transition-colors">Facebook</a>
+                <a href="https://x.com/RVisionElbolson" target="_blank" class="text-stone-300 hover:text-white transition-colors">X (Twitter)</a>
+                <a href="https://www.youtube.com/@radiovisionelbolson4968" target="_blank" class="text-stone-300 hover:text-white transition-colors">YouTube</a>
+            </div>
+        </div>
+        <div class="bg-stone-900 text-center py-4 text-sm text-stone-300">&copy; 2026 RadioVisión El Bolsón. Todos los derechos reservados.</div>
+    </footer>
+    <script>
+        const btn = document.getElementById('menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+        window.addEventListener('DOMContentLoaded', () => {
+            document.body.style.opacity = '1';
+        });
+    </script>
+</body>
+</html>

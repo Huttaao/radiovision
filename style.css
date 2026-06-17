@@ -1,0 +1,43 @@
+/* style.css */
+:root {
+    --color-fondo: #FFFEF2; /* Tu nuevo color crema */
+    /* ... mantén tus otros colores aquí ... */
+}
+
+body {
+  background-color: var(--color-fondo) !important; /* Fondo global para todas las páginas */
+  color: #1f2937;
+  font-family: sans-serif;
+  margin: 0;
+}
+
+/* Estilos base responsivos */
+* {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+img,
+iframe,
+video,
+embed,
+object {
+  max-width: 100%;
+  height: auto;
+}
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Esto fuerza el color sin depender de Tailwind */
+.bg-nav-force {
+    background-color: #B0CBD4 !important;
+}
+
+.bg-card {
+    background-color: #FFFEF7 !important;
+}
